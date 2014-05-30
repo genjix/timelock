@@ -12,12 +12,12 @@ zeroize.o: zeroize.c
 sha256.o: sha256.c
 	$(CXX) -o $@ -c $< $(CXXFLAGS)
 
-hashchains: main.o zeroize.o sha256.o
+timelock: main.o zeroize.o sha256.o
 	$(CXX) -o $@ main.o zeroize.o sha256.o $(LIBS)
 
-all: hashchains
+all: timelock
 
 clean:
-	rm -f hashchains
+	rm -f timelock
 	rm -f *.o
 

@@ -90,7 +90,7 @@ int main(int argc, char** argv)
 {
     if (argc != 3)
     {
-        std::cerr << "Usage: hashchains NONCE N" << std::endl;
+        std::cerr << "Usage: timelock NONCE N" << std::endl;
         return -1;
     }
     const std::string nonce_str = argv[1];
